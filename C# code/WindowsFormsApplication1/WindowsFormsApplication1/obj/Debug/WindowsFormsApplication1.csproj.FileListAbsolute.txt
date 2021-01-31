@@ -1,0 +1,25 @@
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.sol.resources
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.sol.resources
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\NORMAL robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.sol.resources
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\özcan\Desktop\dosyalarım\ÖZCAN SAHİN\PROJELER\PROJE2-GÖREV ROBOTU\İNSANSI robot dökümanları\C# kodu\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

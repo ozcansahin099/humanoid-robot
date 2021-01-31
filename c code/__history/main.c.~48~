@@ -1,0 +1,307 @@
+#include <16f877A.h>   
+#include <math.h>
+
+#fuses XT,NOWDT,NOLVP,NOPROTECT,NOBROWNOUT,NOLVP,NOPUT,NOCPD
+#USE delay(clock=4000000)
+#use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7, parity=N, stop=1)
+
+//#use fast_io (A) //trisleri kendimiz ayarlayalim
+#use fast_io (B)
+#byte INTCON=0x0B
+#byte PIE1=0x8C
+
+#define enable 1 pin_b4
+#define enable 2 pin_b5
+
+int8 gelenVeri=255;
+int8 gelenVeri2=255;
+int8 gelenVeri3=255;
+int8 gelenVeri4=255;
+
+int16 distance,time;
+
+
+long s1=650,s2=650,s3=650,s4=650,s6=650,s7=650,s8=650,s9=650; //darbe genislik sureleri, mikrosaniye cinsinden
+long veri; //kesme ile gelen data
+int sira=1; //gelen verininin hangi servoya gönderildiði bilgisini tutar
+
+
+void main(){
+
+   setup_psp(PSP_DISABLED);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
+   setup_timer_2(T2_DIV_BY_16,255,1);
+   setup_adc_ports(NO_ANALOGS);    
+   setup_adc(ADC_OFF);
+    
+    INTCON=0b11000000; //global ve peripheral kesmeler aktif
+    PIE1=0b00100000; //uart kesmesi ayarlandý.kesme etkin hale getirildi
+    
+    
+    set_tris_b(0b00000000);
+    output_b(0x00);
+    delay_ms(1000);
+ 
+ while(1){
+output_high(pin_a0);//trig=pin_a0
+delay_us(15);
+output_low(pin_a0);
+while(!input(pin_a1));//echo=pin_a1
+set_timer1(0);
+while(input(pin_a1));
+time=get_timer1();
+distance=time/58;
+
+if(distance<10)
+{
+output_low(pin_b4);
+ output_low(pin_b5);
+ 
+ setup_ccp1(CCP_OFF);
+ setup_ccp2(CCP_off);
+ delay_ms(1000);
+ 
+
+}
+
+      
+      output_high(pin_b0);
+      delay_us(s1);
+      output_low(pin_b0);
+
+      output_high(pin_b1);
+      delay_us(s2);
+      output_low(pin_b1);
+
+      output_high(pin_b2);
+      delay_us(s3);
+      output_low(pin_b2);
+      
+      output_high(pin_b3);
+      delay_us(s4);
+      output_low(pin_b3);
+      
+      
+       output_high(pin_a2);
+      delay_us(s6);
+      output_low(pin_a2);
+      
+       output_high(pin_a3);
+      delay_us(s7);
+      output_low(pin_a3);
+      
+       output_high(pin_e0);
+      delay_us(s8);
+      output_low(pin_e0);
+      
+       output_high(pin_a5);
+      delay_us(s9);
+      output_low(pin_a5);
+
+delay_ms(100);
+
+}
+}#INT_RDA
+void seri_data_geldi(){
+veri=getc();
+
+
+if(veri==200){ //sira ilk motorun
+   sira=1;
+}
+if(veri==210){//sira ikinci motorun
+   sira=2;
+}
+if(veri==220){//sira ucuncu motorun
+   sira=3;
+}
+if(veri==230){//sira dördüncü motorun
+  sira=4;
+}
+
+if(veri==231)
+{
+sira=6;
+}
+if(veri==232)
+{
+sira=7;
+}
+if(veri==233)
+{
+sira=8;
+}
+if(veri==234)
+{
+sira=9;
+}
+
+
+
+
+
+if(veri==235) //sola dönüþ sabit hýz
+{
+output_high(pin_b4);
+output_low(pin_b5);
+gelenVeri=getch();
+
+setup_ccp1(CCP_PWM);            
+setup_CCP2(CCP_PWM);
+set_pwm1_duty(gelenVeri);
+set_pwm2_duty(255);
+
+}
+if(veri==236) //saða dönüþ sabit hýz
+{
+output_high(pin_b5);
+output_low(pin_b4);
+gelenVeri2=getch();
+
+ setup_ccp1(CCP_PWM);
+ setup_CCP2(CCP_PWM);
+ set_pwm1_duty(gelenVeri2);
+set_pwm2_duty(255);
+}
+if(veri==237)//ileri sabit hýz
+{
+output_high(pin_b4);
+output_high(pin_b5);
+gelenVeri3=getch();
+
+
+setup_ccp1(CCP_PWM);
+setup_CCP2(CCP_PWM);
+set_pwm1_duty(gelenVeri3);
+set_pwm2_duty(255);
+
+}
+if(veri==238)//geri sabit hýz
+{
+output_high(pin_b4);
+output_high(pin_b5);
+gelenVeri4=getch();
+
+ 
+setup_ccp2(CCP_PWM);
+setup_ccp1(CCP_PWM);
+set_pwm2_duty(gelenVeri4);
+set_pwm1_duty(255);
+
+}
+
+
+
+
+
+if(veri==245)//sola dönüþ
+{  
+
+output_high(pin_b4);
+output_low(pin_b5);
+gelenVeri=getch();
+
+setup_ccp1(CCP_PWM);            
+setup_CCP2(CCP_PWM);
+set_pwm1_duty(gelenVeri);
+set_pwm2_duty(255);
+
+}
+if(veri==250) //saða dönüþ
+{
+
+output_high(pin_b5);
+output_low(pin_b4);
+gelenVeri2=getch();
+
+ setup_ccp1(CCP_PWM);
+ setup_CCP2(CCP_PWM);
+ set_pwm1_duty(gelenVeri2);
+set_pwm2_duty(255);
+
+}
+if(veri==251) //ileri
+{
+
+
+output_high(pin_b4);
+output_high(pin_b5);
+gelenVeri3=getch();
+
+
+setup_ccp1(CCP_PWM);
+setup_CCP2(CCP_PWM);
+set_pwm1_duty(gelenVeri3);
+set_pwm2_duty(255);
+
+}
+if(veri==252)//geri
+{
+
+output_high(pin_b4);
+output_high(pin_b5);
+gelenVeri4=getch();
+
+ 
+setup_ccp2(CCP_PWM);
+setup_ccp1(CCP_PWM);
+set_pwm2_duty(gelenVeri4);
+set_pwm1_duty(255);
+ 
+ }
+if(veri==253 ) //durma
+{
+ output_low(pin_b4);
+ output_low(pin_b5);
+ 
+ setup_ccp1(CCP_OFF);
+ setup_ccp2(CCP_off);
+ 
+ gelenVeri=255;
+gelenVeri2=255;
+gelenVeri3=255;
+gelenVeri4=255;
+ 
+}
+
+if(veri<200){
+if(sira==1){
+   s1=10*veri+540;
+}
+if(sira==2){
+   s2=10*veri+540;
+}
+if(sira==3){
+   s3=10*veri+540;
+}
+if(sira==4)
+{
+ s4=10*veri+540;
+}
+
+if(sira==6)
+{
+ s6=10*veri+540;
+}
+if(sira==7)
+{
+ s7=10*veri+540;
+}
+if(sira==8)
+{
+ s8=10*veri+540;
+}
+if(sira==9)
+{
+ s9=10*veri+540;
+}
+
+}
+output_toggle(pin_a1); //kesme geldi belirteci
+}
+
+
+
+
+
+
